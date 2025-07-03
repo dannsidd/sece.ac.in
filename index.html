@@ -13,7 +13,7 @@
     }
 
     body {
-      background: #f3f4f6;
+      background: #111827; /* Dark background */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -27,11 +27,12 @@
     }
 
     .login-box {
-      background: white;
+      background: #1f2937; /* Darker container */
       padding: 2.5rem;
       border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
       text-align: center;
+      color: #f3f4f6;
     }
 
     .logo {
@@ -42,7 +43,7 @@
     h2 {
       margin-bottom: 1.5rem;
       font-weight: 600;
-      color: #333;
+      color: #ffffff;
     }
 
     .login-form {
@@ -53,7 +54,7 @@
       display: block;
       margin-bottom: 0.4rem;
       font-size: 0.9rem;
-      color: #444;
+      color: #d1d5db;
     }
 
     .login-form input[type="email"],
@@ -61,9 +62,15 @@
       width: 100%;
       padding: 0.75rem;
       margin-bottom: 1rem;
-      border: 1px solid #ccc;
+      border: 1px solid #4b5563;
       border-radius: 6px;
       font-size: 1rem;
+      background-color: #374151;
+      color: #f9fafb;
+    }
+
+    .login-form input::placeholder {
+      color: #9ca3af;
     }
 
     .form-options {
@@ -72,10 +79,11 @@
       align-items: center;
       margin-bottom: 1.5rem;
       font-size: 0.9rem;
+      color: #d1d5db;
     }
 
     .forgot-link {
-      color: #2563eb;
+      color: #60a5fa;
       text-decoration: none;
     }
 
@@ -86,7 +94,7 @@
     .login-btn {
       width: 100%;
       padding: 0.75rem;
-      background-color: #2563eb;
+      background-color: #3b82f6;
       color: white;
       border: none;
       border-radius: 6px;
@@ -97,16 +105,17 @@
     }
 
     .login-btn:hover {
-      background-color: #1d4ed8;
+      background-color: #2563eb;
     }
 
     .signup-text {
       margin-top: 1.5rem;
       font-size: 0.9rem;
+      color: #d1d5db;
     }
 
     .signup-text a {
-      color: #2563eb;
+      color: #60a5fa;
       text-decoration: none;
     }
 
@@ -134,20 +143,17 @@
 
       <form action="/login" method="POST" class="login-form">
         <label for="email">Email address</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+        <input type="email" id="email" name="email" required placeholder="you@sece.ac.in" />
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required placeholder="••••••••" />
 
-        <div class="form-options">
-          <label><input type="checkbox" name="remember" /> Remember me</label>
-          <a href="/forgot-password" class="forgot-link">Forgot password?</a>
-        </div>
+        
 
         <button type="submit" class="login-btn">Sign In</button>
       </form>
 
-      <p class="signup-text">Don't have an account? <a href="/signup">Sign up</a></p>
+      
     </div>
   </div>
 </body>
